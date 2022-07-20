@@ -6,6 +6,10 @@ button.addEventListener('click', function(){
     getRandomJoke();
 })
 
+function onerror(){
+     jokeDIV.textContent = 'An Error occurred';  
+}
+
 function getRandomJoke(){
     const ajax = new XMLHttpRequest;
     const url = ''
@@ -22,8 +26,4 @@ function getRandomJoke(){
         }
     }
     ajax.send();
-}
-
-function onerror(){
-     jokeDIV.textContent = 'An Error occurred';  
 }
